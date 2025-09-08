@@ -1,0 +1,31 @@
+html{
+    scroll-behavior: smooth;
+}
+/*Navbar Classes*/
+.nav{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.nav-item-container{
+    list-style: none;
+    flex-direction: row;
+    display: flex;
+}
+.nav-flex-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
