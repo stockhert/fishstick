@@ -1,6 +1,32 @@
 html{
     scroll-behavior: smooth;
+
 }
+@font-face {
+    font-family: "Cossette";
+    src: url("src/CossetteTitre-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cossette";
+    src: url("src/CossetteTitre-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1, h2, strong, .is-bold {
+    font-weight: 700; /*swaps bold to bold (obvious)*/
+}
+
+body {
+    font-family: "Cossette", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+}
+
 /*Navbar Classes*/
 .nav{
     background-color: black;
