@@ -52,6 +52,10 @@ body {
     margin-right: 20px;
 }
 
+.nav-item-hyperlink{
+    text-decoration: none;
+    color: inherit;
+}
 .nav-item:last-child {
     margin-right: 0;
 }
