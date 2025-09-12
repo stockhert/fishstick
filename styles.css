@@ -1,5 +1,80 @@
-body{
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+@font-face {
+    font-family: 'Cossette';
+    src: url('src/CossetteTitre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+html{
+    font-family: 'Cossette', sans-serif;
+
+}
+/**/
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.container ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+}
+
+.container ul li{
+    font-size: 20px;
+    transition: text-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+    transform-origin: center;
+
+}
+.container ul li:hover{
+    transition: 0.1s;
+    transform: scale(1.1);
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #57737A,
+    0 0 20px #57737A,
+    0 0 30px #57737A,
+    0 0 40px #57737A;
+
+}
+/**/
+
+#textLogoMain{
+    animation: textShadow 211s ease-in-out infinite alternate;
+}
+@keyframes textShadow {
+    0% {
+        text-shadow: none;
+    }
+    100% {    text-shadow: 0 0 5px #fff,
+    0 0 10px #57737A,
+    0 0 20px #57737A,
+    0 0 30px #57737A,
+    0 0 40px #57737A,
+    0 0 60px #ffffff,
+    0 0 70px #57737A,
+    0 0 80px #57737A,
+    0 0 90px #57737A;}
+    }
+body {
+    background-color: #040F0F;
+    color: #C2FCF7;
+}
+
+.Welcome{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+}
+
+.Welcome h1{
+    font-size:12em;
+}
+
+.FrontPage-Button input{
+    background-color: cyan;
+}
+
+
+
