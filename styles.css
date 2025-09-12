@@ -40,7 +40,7 @@ html{
 /**/
 
 #textLogoMain{
-    animation: textShadow 211s ease-in-out infinite alternate;
+    animation: textShadow 8s ease-in-out infinite alternate;
 }
 @keyframes textShadow {
     0% {
