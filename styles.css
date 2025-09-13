@@ -15,10 +15,13 @@ html{
 }
 
 .container ul{
+    background-color: #57737A;
+    padding-left: 7px;
+    padding-right: 7px;
     list-style: none;
     display: flex;
     gap: 50px;
-    padding: 0;
+    border-radius: 12px;
 }
 
 .container ul li{
@@ -46,15 +49,15 @@ html{
     0% {
         text-shadow: none;
     }
-    100% {    text-shadow: 0 0 5px #fff,
+    100% {    text-shadow: 0 0 1px #fff,
+    0 0 5px #57737A,
     0 0 10px #57737A,
     0 0 20px #57737A,
     0 0 30px #57737A,
-    0 0 40px #57737A,
-    0 0 60px #ffffff,
+    0 0 50px #ffffff,
+    0 0 60px #57737A,
     0 0 70px #57737A,
-    0 0 80px #57737A,
-    0 0 90px #57737A;}
+    0 0 80px #57737A;}
     }
 body {
     background-color: #040F0F;
@@ -65,15 +68,39 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-top: 90px;
+    margin-top: -50px;
 }
 
 .Welcome h1{
     font-size:12em;
+    margin-bottom: 0;
+}
+
+.Welcome h3{
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .FrontPage-Button input{
-    background-color: cyan;
+    background-color: #57737A;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-color: #C2FCF7;
+    color: #C2FCF7;
+}
+
+.FrontPage-Button input:hover{
+    text-shadow: 3px 2px 3px black;
+    transform: scale(0.95);
+}
+
+.FrontPage-Button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 
