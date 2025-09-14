@@ -81,7 +81,7 @@ body {
     margin-bottom: 20px;
 }
 
-.FrontPage-Button input{
+.FrontPage-Button button{
     background-color: #57737A;
     width: 150px;
     height: 40px;
@@ -92,7 +92,7 @@ body {
     color: #C2FCF7;
 }
 
-.FrontPage-Button input:hover{
+.FrontPage-Button button:hover{
     text-shadow: 3px 2px 3px black;
     transform: scale(0.95);
 }
