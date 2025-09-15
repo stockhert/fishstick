@@ -82,18 +82,23 @@ body {
 }
 
 .FrontPage-Button button{
-    background-color: #57737A;
+    background-color: transparent;
+    border-radius: 12px;
     width: 150px;
     height: 40px;
     text-align: center;
-    font-weight: 600;
-    font-size: 1.5em;
+    font-weight: 800;
+    font-size: 15px;
     border-color: #C2FCF7;
     color: #C2FCF7;
+    transition: 0.5s;
+
 }
 
 .FrontPage-Button button:hover{
     text-shadow: 3px 2px 3px black;
+    background-color: #4c4c4c;
+    transition: 0.5s;
     transform: scale(0.95);
 }
 
@@ -102,6 +107,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 
 
 
