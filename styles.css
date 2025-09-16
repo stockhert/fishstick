@@ -8,10 +8,6 @@ html{
     font-family: 'Cossette', sans-serif;
 
 }
-a{
-    text-decoration: none;
-    color: #C2FCF7;
-}
 /**/
 .container{
     display: flex;
