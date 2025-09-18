@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>fishstick - Login</title>
+</head>
+<body>
+<!--navbar-->
+<div class="container">
+  <ul>
+    <li>Home</li>
+    <li>Learn</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li style="font-weight: 900">Login</li>
+  </ul>
+</div>
+<!---->
+<div class="loginContainer active" id="login">
+  <h1>log in</h1>
+  <form>
+    <input type="text" placeholder="username">
+    <input type="password" placeholder="password">
+    <button>login</button>
+  </form>
+  <p>don't have an account?</p>
+  <a class="hoverEffect" href="#" style="font-weight: 900" onclick="showByID('signup')">sign up</a>
+</div>
+<div class="loginContainer" id="signup">
+  <h1>sign up</h1>
+  <form>
+    <input type="text" placeholder="username">
+    <input type="password" placeholder="password">
+    <input type="password" placeholder="repeat password">
+    <button>signup</button>
+  </form>
+  <p>already have an account?</p>
+  <a class="hoverEffect" href="#" style="font-weight: 900" onclick="showByID('login')">log in</a>
+</div>
+
+<script src="src/ts/script.js"></script>
+</body>
+</html>
