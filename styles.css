@@ -13,9 +13,7 @@ html, body{
     margin: 0;
 }
 /*Sets border radius to 8 uniform on all*/
-* {
-    border-radius: 8px !important;
-}
+
 /*frontpage (index)*/
 
 #codeBackground {
@@ -201,4 +199,31 @@ body {
     border-color: #C2FCF7;
     caret-color: transparent;
 }
+
+aside{
+    border-radius: 8px;
+    border: 1px solid #C2FCF7;
+    width: 200px;
+    height: 100%;
+    margin-left: 150px;
+    text-align: center;
+}
+
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li{
+    border: 1px solid #C2FCF7;
+    border-radius: 8px;
+    margin: 4px 4px;
+    transition: 0.5s;
+}
+
+aside ul li:hover{
+    transition: 0.5s;
+    background-color: #4c4c4c;
+}
+
 /**/
