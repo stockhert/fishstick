@@ -7,10 +7,74 @@
     <title>FishStick - web development platform</title>
 </head>
 <body>
+    <!--background effect (text type)-->
+    <div id="codeBackground">
+        <pre id="codeTypeOut">
+class PlaceholderData {
+    constructor(apiUrl) {
+        this.apiUrl = apiUrl;
+    }
+
+    async fetchData(endpoint) {
+        try {
+            const response = await fetch(`${this.apiUrl}${endpoint}`);
+            if (!response.ok) {
+                throw new Error(\`Error: \${response.status} - \${response.statusText}\`);
+            }
+            return await response.json();
+        } catch (err) {
+            console.error('Failed to fetch data:', err);
+            return null;
+        }
+    }
+
+    logData(data) {
+        if (!data) {
+            console.warn('No data available to log.');
+            return;
+        }
+        console.log('----- Fetched Data Start -----');
+        console.table(data);
+        console.log('------ Fetched Data End ------');
+    }
+
+    async fetchAndLog(endpoint) {
+        const data = await this.fetchData(endpoint);
+        this.logData(data);
+    }
+}
+
+// Usage example
+const apiClient = new PlaceholderData('https://jsonplaceholder.typicode.com');
+apiClient.fetchAndLog('/posts');
+
+// Utility function for showing delays
+function simulateLongTask(taskName, duration) {
+    return new Promise(resolve => {
+        console.log(\`Starting task: \${taskName}\`);
+        setTimeout(() => {
+            console.log(\`Task \${taskName} completed in \${duration}ms\`);
+            resolve();
+        }, duration);
+    });
+}
+
+(async function runTasks() {
+    await simulateLongTask('Load User Data', 2000);
+    await simulateLongTask('Initialize Components', 1000);
+    console.log('All tasks completed successfully!');
+})();
+</pre>
+        <script src="src/ts/script.js"></script>
+        <script>
+            typeOut(document.getElementById("codeTypeOut"), 7); // Controls typing speed in the background
+        </script>
+    </div>
+    <!---->
 
     <div class="container">
         <ul>
-            <li style="font-weight: 900">Home</li>
+            <li style="font-weight: 900"><a href="index.html">Home</a></li>
             <li>Learn</li>
             <li>About</li>
             <li>Contact</li>
@@ -22,12 +86,6 @@
         <h1 id="textLogoMain">fishstick</h1>
         <h3 id="motto">Build. Stick. Scale.</h3>
 
-        <!--typeout, remove if you want.-->
-        <script src="src/ts/main.js"></script>
-        <script>
-            typeOut(document.getElementById("motto"), 40)
-        </script>
-        <!--end typeout-->
     </div>
 
     <div class="FrontPage-Button">

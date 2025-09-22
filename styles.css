@@ -12,10 +12,32 @@ html, body{
     height: 100%;
     margin: 0;
 }
-/**/
+/*Sets border radius to 8 uniform on all*/
+* {
+    border-radius: 8px !important;
+}
+/*frontpage (index)*/
+
+#codeBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding: 10px 200px;
+    pointer-events: none;
+}
+
 .container{
     display: flex;
     justify-content: center;
+
 }
 a{
     transition: 0.1s;
@@ -31,20 +53,23 @@ footer{
     background-color: #57737A;
 }
 .container ul{
-    background-color: #57737A;
-    padding-left: 7px;
-    padding-right: 7px;
+    background-color: transparent;
+    padding: 3px 10px;
     list-style: none;
     display: flex;
     gap: 50px;
-    border-radius: 12px;
+    border-radius: 8px;
     height: 25px;
+    border: 1px solid #C2FCF7;
+
+
 }
 
 .container ul li{
     font-size: 20px;
     transition: text-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
     transform-origin: center;
+
 }
 .container ul li:hover{
     transition: 0.1s;
@@ -123,7 +148,8 @@ body {
     text-shadow: 3px 2px 3px black;
     background-color: #4c4c4c;
     transition: 0.5s;
-    transform: scale(0.95);
+    transform: scale(0.98);
+    cursor: pointer;
 }
 
 .FrontPage-Button{
@@ -156,7 +182,7 @@ body {
 .loginContainer button, input{
     width: 100%;
     height: 30px;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: transparent;
     border-color: #C2FCF7;
     color: #C2FCF7;
@@ -167,14 +193,12 @@ body {
 .loginContainer button:hover, input:hover{
     background-color: #4c4c4c;
 }
+.loginContainer *:focus{
+    background-color: #4c4c4c;
+}
 .loginContainer input:focus{
     outline: none;
     border-color: #C2FCF7;
+    caret-color: transparent;
 }
 /**/
-
-
-
-
-
-
