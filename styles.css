@@ -202,3 +202,48 @@ body {
     caret-color: transparent;
 }
 /**/
+/*about*/
+.mainbodyAbout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.mainbodyAbout h1{
+    font-size: 24px;
+}
+
+.textContainerAbout{
+    DISPLAY: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+
+}
+.verticalBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #C2FCF7;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.verticalBox:hover{
+    margin-top: -5px;
+    margin-bottom: 5px;
+    transition: 0.25s;
+    background-color: #4c4c4c;
+    cursor: pointer;
+}
+.aboutPerson{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+/**/
