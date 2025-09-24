@@ -241,9 +241,10 @@ body {
     cursor: pointer;
 }
 .aboutPerson{
-    display: flex;
-    flex-direction: row;
+    display: none;
     gap: 20px;
-
+}
+.aboutPerson.active{
+    display: flex;
 }
 /**/

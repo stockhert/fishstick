@@ -1,6 +1,6 @@
-function showByID(formID: string): void {
-    document.querySelectorAll<HTMLElement>(".loginContainer").forEach(form => form.classList.remove("active"));
-    document.getElementById(formID)?.classList.add("active");
+function showByID(targetID: string, HTMLElementClass: string): void {
+    document.querySelectorAll<HTMLElement>(HTMLElementClass).forEach(element => element.classList.remove("active"))
+    document.getElementById(targetID)?.classList.add("active")
 }
 
 function typeOut(element:HTMLElement, delay:number = 100){
