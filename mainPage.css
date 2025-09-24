@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Cossette';
+    src: url('src/CossetteTitre-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    font-family: 'Cossette', sans-serif;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #040F0F;
+    color: #C2FCF7;
+}
+
+a{
+    transition: 0.1s;
+}
+
+a{
+    text-decoration: none;
+    color: #C2FCF7;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+.container ul{
+    background-color: transparent;
+    padding: 3px 10px;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    border-radius: 8px;
+    height: 25px;
+    border: 1px solid #C2FCF7;
+
+
+}
+
+.container ul li{
+    font-size: 20px;
+    transition: text-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+    transform-origin: center;
+
+}
+.container ul li:hover{
+    transition: 0.1s;
+    transform: scale(1.05);
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #57737A,
+    0 0 20px #57737A,
+    0 0 30px #57737A,
+    0 0 40px #57737A;
+}
+
+aside{
+    border-radius: 8px;
+    border: 1px solid #C2FCF7;
+    width: 200px;
+    height: 100%;
+    margin-left: 150px;
+    text-align: center;
+}
+
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li{
+    border: 1px solid #C2FCF7;
+    border-radius: 8px;
+    margin: 4px 4px;
+    transition: 0.5s;
+}
+
+aside ul li:hover{
+    transition: 0.5s;
+    background-color: #4c4c4c;
+}

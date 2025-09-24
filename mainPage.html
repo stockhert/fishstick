@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mainPage.css" />
     <title>FishStick - web development platform</title>
-</head>
+  </head>
 
-<body style="display: flex; flex-direction: column;">
-<div class="container">
-    <ul>
+  <body>
+    <div class="container">
+      <ul>
         <li style="font-weight: 900"><a href="index.html">Home</a></li>
         <li><a href="mainPage.html">Learn</a></li>
         <li>About</li>
         <li>Contact</li>
         <li><a href="login.html">Login</a></li>
-    </ul>
-</div>
+      </ul>
+    </div>
 
-    <main style="flex: 1">
-
-    </main>
+    <main></main>
 
     <aside>
-        <div class="expandable">
-            <div class="expandableTitle">
-                <span class="expandable_html">Html</span>
-            </div>
+      <div class="expandable">
+        <div class="expandable_title_bar">
+          <span class="expandable_html">Html</span>
+          <ion-icon
+            name="chevron-back-outline"
+            class="expandable_html_chevron"
+          ></ion-icon>
         </div>
+        <div class="expandable_content-wrapper">
+          <div class="expandable_conten">
+            <ul>
+              <li>Introduction</li>
+              <li>Elements</li>
+              <li>Attributes</li>
+              <li>Headings</li>
+              <li>Paragraphs</li>
+              <li>Styles</li>
+              <li>Formatting</li>
+              <li>Quotations</li>
+              <li>Comments</li>
+              <li>Colors</li>
+              <li>Links</li>
+              <li>Images</li>
+              <li>Tables</li>
+              <li>Lists</li>
+              <li>Block & Inline</li>
+              <li>Classes</li>
+              <li>Ids</li>
+              <li>Iframes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </aside>
-    <footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
 
-    </footer>
-</body>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
