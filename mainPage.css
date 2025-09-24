@@ -64,10 +64,8 @@ a{
 }
 
 aside{
-    border-radius: 8px;
-    border: 1px solid #C2FCF7;
     width: 200px;
-    height: 100%;
+    height: 570px;
     margin-left: 150px;
     text-align: center;
 }
@@ -78,13 +76,46 @@ aside ul{
 }
 
 aside ul li{
-    border: 1px solid #C2FCF7;
-    border-radius: 8px;
     margin: 4px 4px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 aside ul li:hover{
-    transition: 0.5s;
-    background-color: #4c4c4c;
+    text-decoration: underline;
+    transition: 0.05s;
+    transform: scale(1.05);
+    text-shadow: 0 0 5px #fff,
+    0 0 10px #57737A,
+    0 0 20px #57737A,
+    0 0 30px #57737A,
+    0 0 40px #57737A;
 }
+
+.expandable{
+    max-width: 100%;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.expandable_html{
+    font-weight: 500;
+}
+
+.expandable_content{
+    padding: 0;
+    border: 1px solid #C2FCF7;
+    border-radius: 0 0 8px 8px ;
+    border-top: none;
+}
+
+.expandable_html_chevron{
+    position: absolute;
+}
+
+.expandable_title_bar{
+    cursor: pointer;
+    border: 2px solid #57737A;
+    border-radius: 8px 8px 0 0;
+}
+
