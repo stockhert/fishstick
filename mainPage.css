@@ -31,7 +31,11 @@ a{
 .container{
     display: flex;
     justify-content: center;
-
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    padding: fixed;
 }
 
 .container ul{
@@ -63,11 +67,21 @@ a{
     0 0 40px #57737A;
 }
 
+main{
+    flex: 1;
+    height: auto;
+    margin: 40px;
+    text-align: center;
+    background-color: #57737a;
+}
+
 aside{
-    width: 200px;
-    height: 570px;
+    width: 400px;
+    height: auto;
     margin-left: 150px;
     text-align: center;
+    display: flex; 
+    gap: 20px
 }
 
 aside ul{
@@ -96,10 +110,14 @@ aside ul li:hover{
     max-width: 100%;
     margin: 5px 0;
     font-size: 1.2em;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .expandable--open .expandable_content_wrapper{
-    max-height: 1000px;
+    grid-template-rows: 1fr;
 }
 
 .expandable--open .expandable_html_chevron{
@@ -132,7 +150,7 @@ aside ul li:hover{
 .expandable_content_wrapper{
     display: grid;
     grid-template-rows: 0fr;
-    transition: max-height 0.5s ease-out;
+    transition: grid-template-rows 0.5s ease-out;
     overflow: hidden;
 }
 

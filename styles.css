@@ -11,6 +11,7 @@ html{
 html, body{
     height: 100%;
     margin: 0;
+    
 }
 /*Sets border radius to 8 uniform on all*/
 
@@ -105,6 +106,7 @@ a{
 body {
     background-color: #040F0F;
     color: #C2FCF7;
+    
 }
 
 .Welcome{
