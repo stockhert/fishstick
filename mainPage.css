@@ -98,6 +98,14 @@ aside ul li:hover{
     font-size: 1.2em;
 }
 
+.expandable--open .expandable_content_wrapper{
+    max-height: 1000px;
+}
+
+.expandable--open .expandable_html_chevron{
+    transform: rotate(-90deg);
+}
+
 .expandable_html{
     font-weight: 500;
 }
@@ -107,15 +115,24 @@ aside ul li:hover{
     border: 1px solid #C2FCF7;
     border-radius: 0 0 8px 8px ;
     border-top: none;
+    overflow: hidden;
 }
 
 .expandable_html_chevron{
-    position: absolute;
+    position: relative;
+    transition: transform 0.5s;
 }
 
 .expandable_title_bar{
     cursor: pointer;
     border: 2px solid #57737A;
     border-radius: 8px 8px 0 0;
+}
+
+.expandable_content_wrapper{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
 }
 
