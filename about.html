@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="styles.css">
     <title>fishstick - about</title>
 </head>
-<body>
-<div class="container">
+<body id="aboutBody">
+<!--navbar-->
+<div class="navContainer">
     <ul>
         <li><a href="index.html">Home</a></li>
         <li>Learn</li>
@@ -16,25 +17,49 @@
         <li><a href="login.html">Login</a></li>
     </ul>
 </div>
-<div class="mainbodyAbout">
-    <h1>welcome to fishstick learning</h1>
+<!---->
+
+<!---->
+<div class="mainAboutText">
+    <h1>about fishstick</h1>
+    <p>
+        fishstick is an online learning platform founded by <span class="glow"><a href="#anchorAboutUs">three technology students</a></span>
+        interested in teaching web development.
+    </p>
+    <p>
+        we are committed to providing a platform that is easy to use and fun to learn.
+    </p>
+</div>
+<!---->
+
+<!--about us)-->
+<div class="mainAboutUs" id="anchorAboutUs">
+    <h1>about us</h1>
+    <p>the team behind fishstick are three people</p>
+    <p>we are:</p>
     <div class="textContainerAbout">
         <div class="verticalBox" onclick="showByID('HM', '.aboutPerson')">
             <h1>Harry H. Martin</h1>
+            <p>role</p>
         </div>
         <div class="verticalBox" onclick="showByID('RZ', '.aboutPerson')">
             <h1>Ramez B. Zariab</h1>
+            <p>role</p>
         </div>
         <div class="verticalBox" onclick="showByID('EC', '.aboutPerson')">
             <h1>Elif Cifoglu</h1>
+            <p>role</p>
         </div>
     </div>
 </div>
 
 <div class="aboutPeople">
-    <div class="aboutPerson" id="RZ">rz</div>
-    <div class="aboutPerson" id="HM">hm</div>
-    <div class="aboutPerson" id="EC">ec</div>
+    <div class="aboutPerson" id="RZ">
+    </div>
+    <div class="aboutPerson" id="HM">
+    </div>
+    <div class="aboutPerson" id="EC">
+    </div>
 </div>
 
 <script src="src/ts/script.js"></script>
