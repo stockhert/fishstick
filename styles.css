@@ -12,9 +12,12 @@ html, body{
     height: 100%;
     margin: 0;
 }
-/*Sets border radius to 8 uniform on all*/
-* {
-    border-radius: 8px !important;
+
+:root {
+    --primary-color: #C2FCF7;
+    --secondary-color: #57737A;
+    --bg-color: #4c4c4c;
+    --border-radius: 8px;
 }
 /*frontpage (index)*/
 
@@ -27,7 +30,7 @@ html, body{
     z-index: -10;
     color: rgba(255, 255, 255, 0.4);
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2em;
+    font-size: 30px;
     white-space: pre-wrap;
     overflow: hidden;
     padding: 10px 200px;
@@ -58,7 +61,7 @@ footer{
     list-style: none;
     display: flex;
     gap: 50px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     height: 25px;
     border: 1px solid #C2FCF7;
 
@@ -132,7 +135,7 @@ body {
 
 .FrontPage-Button button{
     background-color: transparent;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     width: 150px;
     height: 40px;
     text-align: center;
@@ -182,7 +185,7 @@ body {
 .loginContainer button, input{
     width: 100%;
     height: 30px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     background-color: transparent;
     border-color: #C2FCF7;
     color: #C2FCF7;
@@ -227,7 +230,7 @@ body {
     flex-direction: column;
     gap: 10px;
     border: 1px solid #C2FCF7;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     width: 200px;
     text-align: center;
     transition: 0.25s;
@@ -253,7 +256,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     border: 1px solid #C2FCF7;
     margin-top: 40px;
     width: 80%;
