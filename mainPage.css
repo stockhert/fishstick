@@ -68,20 +68,33 @@ a{
 }
 
 main{
-    flex: 1;
-    height: 400px;
-    margin: 40px;
+    width: 600px;
+    height: 600px;
     text-align: center;
-    background-color: #57737a;
+    overflow: auto;
+    font-size: 20px;
+    padding: 10px;
+    margin-right: 200px;
+    border: 1px solid #C2FCF7;
+    border-radius: 8px;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
+main::-webkit-scrollbar {
+    display: none;
+}
+
+
 aside{
-    width: 400px;
+    float: left;
+    width: 350px;
     height: auto;
     margin-left: 150px;
     text-align: center;
     display: flex; 
-    gap: 20px
+    gap: 20px;
 }
 
 aside ul{
