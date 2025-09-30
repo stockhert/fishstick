@@ -1,55 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>fishstick - web development platform</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--background effect (text type)-->
     <div id="codeBackground">
-        <pre id="codeTypeOut">
-            placeholder
-                placeholder
-                placeholder
-            placeholder
-                placeholder
-                    placeholder
-                    placeholder
-                placeholder
-                placeholder
-        </pre>
-        <script src="src/ts/script.js"></script>
-        <script>
-            typeOut(document.getElementById("codeTypeOut"), 1); // Controls typing speed in the background
-        </script>
+      <pre id="codeTypeOut">
+class PlaceholderData {
+    constructor(apiUrl) {
+        this.apiUrl = apiUrl;
+    }
+
+    async fetchData(endpoint) {
+        try {
+            const response = await fetch(`${this.apiUrl}${endpoint}`);
+            if (!response.ok) {
+                throw new Error(\`Error: \${response.status} - \${response.statusText}\`);
+            }
+            return await response.json();
+        } catch (err) {
+            console.error('Failed to fetch data:', err);
+            return null;
+        }
+    }
+
+    logData(data) {
+        if (!data) {
+            console.warn('No data available to log.');
+            return;
+        }
+        console.log('----- Fetched Data Start -----');
+        console.table(data);
+        console.log('------ Fetched Data End ------');
+    }
+
+    async fetchAndLog(endpoint) {
+        const data = await this.fetchData(endpoint);
+        this.logData(data);
+    }
+}
+
+// Usage example
+const apiClient = new PlaceholderData('https://jsonplaceholder.typicode.com');
+apiClient.fetchAndLog('/posts');
+
+// Utility function for showing delays
+function simulateLongTask(taskName, duration) {
+    return new Promise(resolve => {
+        console.log(\`Starting task: \${taskName}\`);
+        setTimeout(() => {
+            console.log(\`Task \${taskName} completed in \${duration}ms\`);
+            resolve();
+        }, duration);
+    });
+}
+
+(async function runTasks() {
+    await simulateLongTask('Load User Data', 2000);
+    await simulateLongTask('Initialize Components', 1000);
+    console.log('All tasks completed successfully!');
+})();
+</pre
+      >
+      <script src="src/ts/script.js"></script>
+      <script>
+        typeOut(document.getElementById("codeTypeOut"), 7); // Controls typing speed in the background
+      </script>
     </div>
     <!---->
 
-    <div class="navContainer">
-        <ul>
-            <li style="font-weight: 900"><a href="index.html">Home</a></li>
-            <li>Learn</li>
-            <li><a href="about.html">About</a></li>
-            <li>Contact</li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+    <div class="container">
+      <ul>
+        <li style="font-weight: 900"><a href="index.html">Home</a></li>
+        <li><a href="mainPage.html">Learn</a></li>
+        <li>About</li>
+        <li>Contact</li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
     </div>
     <div class="Welcome">
-        <!--<img  src="src/img/placeholderLogo.png" alt="logo">-->
-        <h1 id="textLogoMain">fishstick</h1>
-        <h3 id="motto">Build. Stick. Scale.</h3>
-
+      <!--<img  src="src/img/placeholderLogo.png" alt="logo">-->
+      <h1 id="textLogoMain">fishstick</h1>
+      <h3 id="motto">Build. Stick. Scale.</h3>
     </div>
 
     <div class="FrontPage-Button">
-        <a href="mainPage.html">
-            <button>
-                Get Started
-            </button>
-        </a>
+      <a href="mainPage.html">
+        <button>Get Started</button>
+      </a>
     </div>
-<script src="src/ts/script.js"></script>
-</body>
+    <script src="src/ts/script.js"></script>
+  </body>
 </html>

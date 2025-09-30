@@ -6,34 +6,14 @@
 }
 html{
     font-family: 'Cossette', sans-serif;
-    scroll-behavior: smooth;
 }
 
 html, body{
     height: 100%;
     margin: 0;
+    
 }
-
-:root {
-    --primary-color: #C2FCF7;
-    --secondary-color: #57737A;
-    --bg-color: #4c4c4c;
-    --border-radius: 8px;
-}
-
-/*effects*/
-.glow{
-    text-shadow: 0 0 5px #fff,
-    0 0 10px #57737A,
-    0 0 20px #57737A,
-    0 0 30px #57737A,
-    0 0 40px #57737A;
-}
-
-.invert{
-    filter: invert(1);
-}
-/**/
+/*Sets border radius to 8 uniform on all*/
 
 /*frontpage (index)*/
 
@@ -46,16 +26,17 @@ html, body{
     z-index: -10;
     color: rgba(255, 255, 255, 0.4);
     font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
+    font-size: 1.2em;
     white-space: pre-wrap;
     overflow: hidden;
     padding: 10px 200px;
     pointer-events: none;
 }
 
-.navContainer{
+.container{
     display: flex;
     justify-content: center;
+
 }
 a{
     transition: 0.1s;
@@ -66,30 +47,26 @@ a{
     color: #C2FCF7;
 }
 
-footer{
-    height: 75px;
-    background-color: #57737A;
-}
-.navContainer ul{
+.container ul{
     background-color: transparent;
     padding: 3px 10px;
     list-style: none;
     display: flex;
     gap: 50px;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     height: 25px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid #C2FCF7;
 
 
 }
 
-.navContainer ul li{
+.container ul li{
     font-size: 20px;
     transition: text-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
     transform-origin: center;
 
 }
-.navContainer ul li:hover{
+.container ul li:hover{
     transition: 0.1s;
     transform: scale(1.05);
     text-shadow: 0 0 5px #fff,
@@ -129,6 +106,7 @@ footer{
 body {
     background-color: #040F0F;
     color: #C2FCF7;
+    
 }
 
 .Welcome{
@@ -150,15 +128,16 @@ body {
 
 .FrontPage-Button button{
     background-color: transparent;
-    border-radius: var(--border-radius);
+    border-radius: 12px;
     width: 150px;
     height: 40px;
     text-align: center;
     font-weight: 800;
     font-size: 15px;
-    border-color: var(--secondary-color);
-    color: var(--primary-color);
+    border-color: #C2FCF7;
+    color: #C2FCF7;
     transition: 0.5s;
+
 }
 
 .FrontPage-Button button:hover{
@@ -199,7 +178,7 @@ body {
 .loginContainer button, input{
     width: 100%;
     height: 30px;
-    border-radius: var(--border-radius);
+    border-radius: 8px;
     background-color: transparent;
     border-color: #C2FCF7;
     color: #C2FCF7;
@@ -218,73 +197,6 @@ body {
     border-color: #C2FCF7;
     caret-color: transparent;
 }
-/**/
-/*about*/
-.mainAboutText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.mainAboutText p, .mainAboutUs p{
-    margin: 0;
-}
-.mainAboutText p:last-of-type, .mainAboutUs p:last-of-type{
-    margin-bottom: 50px;
-}
-
-.mainAboutUs{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0px;
-}
 
 
-.textContainerAbout{
-    DISPLAY: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 50px;
-
-}
-.verticalBox{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    width: 200px;
-    text-align: center;
-    transition: 0.25s;
-}
-
-.verticalBox:hover{
-    margin-top: -5px;
-    margin-bottom: 5px;
-    transition: 0.25s;
-    background-color: var(--secondary-color);
-    cursor: pointer;
-}
-
-.aboutPeople{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-.aboutPerson{  /*dont touch this*/
-    display: none;
-}
-.aboutPerson.active{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--secondary-color);
-    margin-top: 40px;
-    width: 50%;
-}
 /**/
