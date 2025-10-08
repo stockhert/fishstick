@@ -44,7 +44,6 @@ a{
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    padding: fixed;
 }
 
 .container ul{
@@ -91,7 +90,7 @@ main{
     overflow: auto;
     font-size: 20px;
     padding: 10px;
-    margin-right: 200px;
+    margin-right: 380px;
     border: 1px solid #C2FCF7;
     border-radius: 8px;
 
@@ -105,13 +104,15 @@ main::-webkit-scrollbar {
 
 
 aside{
+    gap: 0;
     float: left;
     width: 350px;
     height: auto;
-    margin-left: 150px;
+    margin-left: 15px;
     text-align: center;
-    display: flex; 
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
 }
 
 aside ul{
@@ -137,8 +138,7 @@ aside ul li:hover{
 }
 
 .expandable{
-    max-width: 100%;
-    margin: 5px 0;
+    width: 300px;
     font-size: 1.2em;
     user-select: none;
     -webkit-user-select: none;
@@ -161,7 +161,6 @@ aside ul li:hover{
 .expandable_content{
     padding: 0;
     border: 1px solid #C2FCF7;
-    border-radius: 0 0 8px 8px ;
     border-top: none;
     overflow: hidden;
 }
@@ -174,7 +173,6 @@ aside ul li:hover{
 .expandable_title_bar{
     cursor: pointer;
     border: 2px solid #57737A;
-    border-radius: 8px 8px 0 0;
 }
 
 .expandable_content_wrapper{
