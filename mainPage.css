@@ -15,6 +15,8 @@ html, body{
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(120deg, #062929, #041616, #062929);
     background-size: 200% 200%;
     animation: gradientMove 10s ease infinite;
@@ -76,21 +78,26 @@ a{
 }
 
 .MainContent{
+    flex: 1;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: row;
     margin-top: 10px;
     width: 100%;
+    position: relative;
 }
 
 main{
-    flex: 1;
-    width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
     height: 400px;
     text-align: center;
     overflow: auto;
     font-size: 20px;
     padding: 10px;
-    margin-right: 380px;
     border: 1px solid #C2FCF7;
     border-radius: 8px;
 
@@ -106,13 +113,14 @@ main::-webkit-scrollbar {
 aside{
     gap: 0;
     float: left;
-    width: 350px;
+    width: auto;
     height: auto;
     margin-left: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    border: 1px solid #C2FCF7;
+    border-radius: 8px;
 }
 
 aside ul{
@@ -126,6 +134,7 @@ aside ul li{
     cursor: pointer;
 }
 
+
 aside ul li:hover{
     text-decoration: underline;
     transition: 0.05s;
@@ -138,6 +147,7 @@ aside ul li:hover{
 }
 
 .expandable{
+    margin: 5px;
     width: 300px;
     font-size: 1.2em;
     user-select: none;
@@ -183,10 +193,10 @@ aside ul li:hover{
 }
 
 footer{
-    position: absolute; bottom: 0;
+    position: relative; bottom: 0;
     height: auto;
-    width: 100%;
     text-align: center;
+    width: 100%;
     background-color: #040F0F;
     color: white;
 }
