@@ -6,6 +6,7 @@ const messageBox = document.getElementById("message") as HTMLElement
 signupForm.addEventListener("submit", async (i) => {
     i.preventDefault();
     const username = (document.getElementById("signupUsername") as HTMLInputElement).value;
+    const email = (document.getElementById("signupEmail") as HTMLInputElement).value;
     const password = (document.getElementById("signupPassword") as HTMLInputElement).value;
     const rPassword = (document.getElementById("signupRepeatPassword") as HTMLInputElement).value;
 
@@ -13,7 +14,7 @@ signupForm.addEventListener("submit", async (i) => {
         const res = await fetch("http://localhost:3000/signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ username, password, email}),
         })
         const data = await res.json();
         messageBox.textContent = data.message || JSON.stringify(data);
@@ -26,17 +27,32 @@ signupForm.addEventListener("submit", async (i) => {
 
 //login handling
 loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const username = (document.getElementById("loginUsername") as HTMLInputElement).value;
-  const password = (document.getElementById("loginPassword") as HTMLInputElement).value;
+    const username = (document.getElementById("loginUsername") as HTMLInputElement).value.trim();
+    const email = (document.getElementById("loginEmail") as HTMLInputElement).value.trim();
+    const password = (document.getElementById("loginPassword") as HTMLInputElement).value.trim();
 
-  const res = await fetch("http://localhost:3000/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password }),
-  });
+    let identifierType: "email" | "username" | null = null;
+    let identifier: string = "";
 
-  const data = await res.json();
-  messageBox.textContent = data.message || JSON.stringify(data);
+    if (email && !username) {
+        identifier = email;
+        identifierType = "email";
+    } else if (username && !email) {
+        identifier = username;
+        identifierType = "username";
+    } else {
+        messageBox.textContent = "Please fill in *either* username or email (not both).";
+        return;
+    }
+
+    const res = await fetch("http://localhost:3000/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ identifier, password, identifierType }),
+    });
+
+    const data = await res.json();
+    messageBox.textContent = data.message || JSON.stringify(data);
 });

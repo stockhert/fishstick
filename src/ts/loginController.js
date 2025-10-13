@@ -40,19 +40,20 @@ var signupForm = document.getElementById("signupForm");
 var messageBox = document.getElementById("message");
 //signup handling
 signupForm.addEventListener("submit", function (i) { return __awaiter(_this, void 0, void 0, function () {
-    var username, password, rPassword, res, data;
+    var username, email, password, rPassword, res, data;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 i.preventDefault();
                 username = document.getElementById("signupUsername").value;
+                email = document.getElementById("signupEmail").value;
                 password = document.getElementById("signupPassword").value;
                 rPassword = document.getElementById("signupRepeatPassword").value;
                 if (!(password == rPassword)) return [3 /*break*/, 3];
                 return [4 /*yield*/, fetch("http://localhost:3000/signup", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ username: username, password: password }),
+                        body: JSON.stringify({ username: username, password: password, email: email }),
                     })];
             case 1:
                 res = _a.sent();
@@ -70,17 +71,32 @@ signupForm.addEventListener("submit", function (i) { return __awaiter(_this, voi
 }); });
 //login handling
 loginForm.addEventListener("submit", function (e) { return __awaiter(_this, void 0, void 0, function () {
-    var username, password, res, data;
+    var username, email, password, identifierType, identifier, res, data;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 e.preventDefault();
-                username = document.getElementById("loginUsername").value;
-                password = document.getElementById("loginPassword").value;
+                username = document.getElementById("loginUsername").value.trim();
+                email = document.getElementById("loginEmail").value.trim();
+                password = document.getElementById("loginPassword").value.trim();
+                identifierType = null;
+                identifier = "";
+                if (email && !username) {
+                    identifier = email;
+                    identifierType = "email";
+                }
+                else if (username && !email) {
+                    identifier = username;
+                    identifierType = "username";
+                }
+                else {
+                    messageBox.textContent = "Please fill in *either* username or email (not both).";
+                    return [2 /*return*/];
+                }
                 return [4 /*yield*/, fetch("http://localhost:3000/login", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ username: username, password: password }),
+                        body: JSON.stringify({ identifier: identifier, password: password, identifierType: identifierType }),
                     })];
             case 1:
                 res = _a.sent();

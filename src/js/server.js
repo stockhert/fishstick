@@ -27,17 +27,20 @@ db.query(`
   CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) UNIQUE,
-    password VARCHAR(255)
+    password VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    points INT NOT NULL DEFAULT 0,
+    CHECK (email LIKE '%@%')
   );
 `);
 
 // signup route
 app.post("/signup", (req, res) => {
-    const { username, password } = req.body;
+    const { username, password, email} = req.body;
 
     db.query(
-        "INSERT INTO users (username, password) VALUES (?, ?)",
-        [username, password],
+        "INSERT INTO users (username, password, email) VALUES (?, ?, ?)",
+        [username, password, email],
         (err) => {
             if (err) {
                 if (err.code === "ER_DUP_ENTRY") {
@@ -52,22 +55,22 @@ app.post("/signup", (req, res) => {
 
 // login route
 app.post("/login", (req, res) => {
-    const { username, password } = req.body;
+    const { identifier, password, identifierType } = req.body;
+    const query = identifierType === "email"
+        ? "SELECT * FROM users WHERE email = ? AND password = ?"
+        : "SELECT * FROM users WHERE username = ? AND password = ?";
 
-    db.query(
-        "SELECT * FROM users WHERE username = ? AND password = ?",
-        [username, password],
-        (err, result) => {
-            if (err) return res.status(500).json({ message: "Database error" });
+    db.query(query, [identifier, password], (err, result) => {
+        if (err) return res.status(500).json({ message: "Database error" });
 
-            if (result.length > 0) {
-                res.json({ message: "Login successful!" });
-            } else {
-                res.json({ message: "Invalid username or password" });
-            }
+        if (result.length > 0) {
+            res.json({ message: "Login successful!" });
+        } else {
+            res.json({ message: "Invalid credentials" });
         }
-    );
+    });
 });
+
 
 // ✅ start server
 app.listen(3000, () => {
