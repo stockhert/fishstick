@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: "localhost", // remove '@'
+    host: "localhost",
     user: "fishAdmin",
     password: "admin123",
     database: "usersDB",
@@ -72,7 +72,9 @@ app.post("/login", (req, res) => {
 });
 
 
-// ✅ start server
+// start server
 app.listen(3000, () => {
     console.log("Server running on http://localhost:3000");
 });
+
+//
