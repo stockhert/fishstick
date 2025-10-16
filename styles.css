@@ -13,6 +13,13 @@ html, body{
     margin: 0;
     
 }
+
+html *{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
 /*Sets border radius to 8 uniform on all*/
 
 /*frontpage (index)*/
@@ -104,9 +111,10 @@ a{
     0 0 80px #57737A;}
     }
 body {
-    background-color: #040F0F;
+    background: linear-gradient(120deg, #062929, #041616, #062929);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
     color: #C2FCF7;
-    
 }
 
 .Welcome{
@@ -198,5 +206,13 @@ body {
     caret-color: transparent;
 }
 
+footer{
+    position: relative; bottom: 0;
+    height: auto;
+    text-align: center;
+    width: 100%;
+    background-color: #040F0F;
+    color: white;
+}
 
 /**/
