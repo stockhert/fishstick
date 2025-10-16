@@ -9,6 +9,13 @@ html{
     scroll-behavior: smooth;
 }
 
+html *{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 html, body{
     height: 100%;
     margin: 0;
@@ -126,8 +133,11 @@ footer{
     0 0 70px #57737A,
     0 0 80px #57737A;}
 }
+
 body {
-    background-color: #040F0F;
+    background: linear-gradient(120deg, #062929, #041616, #062929);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
     color: #C2FCF7;
 }
 
