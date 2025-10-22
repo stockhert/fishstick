@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to HTML",
+    "content": "<p>HTML stands for blah blah...</p>"
+  },
+  {
+    "id": 2,
+    "title": "paragraphs or whatever",
+    "content": "<p>CSS is used to style your web pages...</p>"
+  }
+]
