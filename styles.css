@@ -56,6 +56,10 @@ html, body{
 .navContainer{
     display: flex;
     justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 a{
     transition: 0.1s;
@@ -127,7 +131,9 @@ footer{
     0 0 80px #57737A;}
 }
 body {
-    background-color: #040F0F;
+    background: linear-gradient(120deg, #062929, #041616, #062929);
+    background-size: 200% 200%;
+    animation: gradientMove 10s ease infinite;
     color: #C2FCF7;
 }
 
@@ -136,16 +142,28 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: -50px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .Welcome h1{
     font-size:12em;
     margin-bottom: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .Welcome h3{
     font-size: 2em;
     margin-bottom: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .FrontPage-Button button{
@@ -159,6 +177,10 @@ body {
     border-color: var(--secondary-color);
     color: var(--primary-color);
     transition: 0.5s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .FrontPage-Button button:hover{
@@ -173,6 +195,10 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /*Login*/

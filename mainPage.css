@@ -11,6 +11,7 @@ html{
 
 html, body{
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 
@@ -148,7 +149,7 @@ aside ul li:hover{
 
 .expandable{
     margin: 5px;
-    width: 300px;
+    width: 250px;
     font-size: 1.2em;
     user-select: none;
     -webkit-user-select: none;
