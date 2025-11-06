@@ -16,9 +16,6 @@ html, body{
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     background: linear-gradient(120deg, #062929, #041616, #062929);
     background-size: 200% 200%;
     animation: gradientMove 10s ease infinite;
@@ -174,7 +171,9 @@ aside ul li:hover{
 
 .expandable_content{
     padding: 0;
+    margin-top: -1px;
     border: 1px solid #C2FCF7;
+    border-radius: 0 0 8px 8px;
     border-top: none;
     overflow: hidden;
 }
@@ -207,8 +206,18 @@ footer{
     margin-top: 10px;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .mrbean{
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+@media {
+
 }
