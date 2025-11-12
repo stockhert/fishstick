@@ -103,6 +103,7 @@ main{
     justify-content: center;
     text-align: center;
     align-content: center;
+    margin-top: 10px;
 }
 
 .contact{
@@ -110,10 +111,11 @@ main{
     flex-direction: column;
     border: #C2FCF7 1px solid;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     border-radius: 8px;
     width: 100%;
     max-width: 400px;
+    margin: auto;
 }
 
 .contact input, textarea{
@@ -121,18 +123,23 @@ main{
     border: #C2FCF7 1px solid;
     color: #C2FCF7;
     font-family: 'Cossette';
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .contact input::placeholder, textarea::placeholder{
     color: #C2FCF7;
     font-family: 'Cossette';
-    font-size: 1em;
 }
 
 .contact input, textarea, button{
     margin: 10px 10px 0 0;
-    width: 70%;
+    width: 100%;
+}
+
+.contact input:focus, .contact textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px lightblue, 0 0 10px #57737A;
 }
 
 footer{
