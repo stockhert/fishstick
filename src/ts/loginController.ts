@@ -2,6 +2,17 @@ const loginForm = document.getElementById("loginForm") as HTMLElement
 const signupForm = document.getElementById("signupForm") as HTMLElement
 const messageBox = document.getElementById("message") as HTMLElement
 
+// auto-redirect if already logged in
+(async () => {
+    try {
+        const res = await fetch("http://localhost:3000/me", { credentials: "include" });
+        const data = await res.json();
+        if (res.ok && data.authenticated) {
+            window.location.href = "mainPage.html";
+        }
+    } catch {}
+})();
+
 //signup handling
 signupForm.addEventListener("submit", async (i) => {
     i.preventDefault();
@@ -50,9 +61,23 @@ loginForm.addEventListener("submit", async (e) => {
     const res = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        credentials: "include", // allows cookies to be sent/received
         body: JSON.stringify({ identifier, password, identifierType }),
     });
 
     const data = await res.json();
     messageBox.textContent = data.message || JSON.stringify(data);
+    
+    // redirect on success
+    if (res.ok && data.success) {
+        window.location.href = "mainPage.html";
+    }
 });
+
+// optional: logout helper
+export async function logout() {
+    try {
+        await fetch("http://localhost:3000/logout", { method: "POST", credentials: "include" });
+        window.location.href = "login.html";
+    } catch {}
+}
