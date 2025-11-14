@@ -124,6 +124,7 @@ main{
     color: #C2FCF7;
     font-family: 'Cossette';
     font-size: 1.5em;
+    border-radius: var(--border-radius);
 }
 
 input::placeholder,
