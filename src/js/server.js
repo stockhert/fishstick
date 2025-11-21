@@ -4,14 +4,25 @@ import cors from "cors";
 import mysql from "mysql2";
 import cookieParser from "cookie-parser";
 
-
 const app = express();
+
+app.use(cookieParser()); // parse cookies first
+const allowedOrigins = ["http://localhost:3000", "http://localhost:63342"];
+
 app.use(cors({
-    origin: "http://localhost:3000", // adjust to your frontend origin if different
+    origin: function(origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true
 }));
-app.use(express.json());
-app.use(cookieParser());
+
+app.use(express.json());      // parse JSON bodies
+app.use(express.static("public")); // serve HTML/JS/CSS
+
 
 // cookiesession setup
 const SESS_COOKIE = "sid";
@@ -53,7 +64,7 @@ app.use(authMiddleware);
 
 
 const db = mysql.createConnection({
-    host: "localhost", // remove '@'
+    host: "localhost",
     user: "fishAdmin",
     password: "admin123",
     database: "usersDB",

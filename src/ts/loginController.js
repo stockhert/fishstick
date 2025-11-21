@@ -1,3 +1,4 @@
+// loginController.ts
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -38,22 +39,51 @@ var _this = this;
 var loginForm = document.getElementById("loginForm");
 var signupForm = document.getElementById("signupForm");
 var messageBox = document.getElementById("message");
-//signup handling
-signupForm.addEventListener("submit", function (i) { return __awaiter(_this, void 0, void 0, function () {
+// auto-redirect if already logged in
+(function () { return __awaiter(_this, void 0, void 0, function () {
+    var res, data, _a;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                _b.trys.push([0, 3, , 4]);
+                return [4 /*yield*/, fetch("http://localhost:3000/me", {
+                        credentials: "include"
+                    })];
+            case 1:
+                res = _b.sent();
+                return [4 /*yield*/, res.json()];
+            case 2:
+                data = _b.sent();
+                if (res.ok && data.authenticated) {
+                    window.location.href = "mainPage.html";
+                }
+                return [3 /*break*/, 4];
+            case 3:
+                _a = _b.sent();
+                return [3 /*break*/, 4];
+            case 4: return [2 /*return*/];
+        }
+    });
+}); })();
+// ------------ SIGNUP ------------
+signupForm.addEventListener("submit", function (e) { return __awaiter(_this, void 0, void 0, function () {
     var username, email, password, rPassword, res, data;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                i.preventDefault();
+                e.preventDefault();
                 username = document.getElementById("signupUsername").value;
                 email = document.getElementById("signupEmail").value;
                 password = document.getElementById("signupPassword").value;
                 rPassword = document.getElementById("signupRepeatPassword").value;
-                if (!(password == rPassword)) return [3 /*break*/, 3];
+                if (password !== rPassword) {
+                    messageBox.textContent = "Passwords do not match.";
+                    return [2 /*return*/];
+                }
                 return [4 /*yield*/, fetch("http://localhost:3000/signup", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ username: username, password: password, email: email }),
+                        body: JSON.stringify({ username: username, password: password, email: email })
                     })];
             case 1:
                 res = _a.sent();
@@ -61,15 +91,11 @@ signupForm.addEventListener("submit", function (i) { return __awaiter(_this, voi
             case 2:
                 data = _a.sent();
                 messageBox.textContent = data.message || JSON.stringify(data);
-                return [3 /*break*/, 4];
-            case 3:
-                messageBox.textContent = "fail";
-                _a.label = 4;
-            case 4: return [2 /*return*/];
+                return [2 /*return*/];
         }
     });
 }); });
-//login handling
+// ------------ LOGIN ------------
 loginForm.addEventListener("submit", function (e) { return __awaiter(_this, void 0, void 0, function () {
     var username, email, password, identifierType, identifier, res, data;
     return __generator(this, function (_a) {
@@ -82,21 +108,22 @@ loginForm.addEventListener("submit", function (e) { return __awaiter(_this, void
                 identifierType = null;
                 identifier = "";
                 if (email && !username) {
-                    identifier = email;
                     identifierType = "email";
+                    identifier = email;
                 }
                 else if (username && !email) {
-                    identifier = username;
                     identifierType = "username";
+                    identifier = username;
                 }
                 else {
-                    messageBox.textContent = "Please fill in *either* username or email (not both).";
+                    messageBox.textContent = "Please fill in either username OR email (not both).";
                     return [2 /*return*/];
                 }
                 return [4 /*yield*/, fetch("http://localhost:3000/login", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ identifier: identifier, password: password, identifierType: identifierType }),
+                        credentials: "include",
+                        body: JSON.stringify({ identifier: identifier, password: password, identifierType: identifierType })
                     })];
             case 1:
                 res = _a.sent();
@@ -104,7 +131,34 @@ loginForm.addEventListener("submit", function (e) { return __awaiter(_this, void
             case 2:
                 data = _a.sent();
                 messageBox.textContent = data.message || JSON.stringify(data);
+                if (res.ok && data.success) {
+                    window.location.href = "mainPage.html";
+                }
                 return [2 /*return*/];
         }
     });
 }); });
+// ------------ logout optional ------------
+window.logout = function () {
+    return __awaiter(this, void 0, void 0, function () {
+        var _a;
+        return __generator(this, function (_b) {
+            switch (_b.label) {
+                case 0:
+                    _b.trys.push([0, 2, , 3]);
+                    return [4 /*yield*/, fetch("http://localhost:3000/logout", {
+                            method: "POST",
+                            credentials: "include"
+                        })];
+                case 1:
+                    _b.sent();
+                    window.location.href = "login.html";
+                    return [3 /*break*/, 3];
+                case 2:
+                    _a = _b.sent();
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
+};
