@@ -198,7 +198,6 @@
     "title": "Displays",
     "content": "The display property controls how elements behave: block, inline, flex, or grid. Flex and grid are powerful for building modern layouts.\n\nExample: .container { display: flex; } creates a flexible layout where items can sit in rows or columns. Flexbox makes alignment and spacing much easier.\n\nTask: Create a flexbox row with three evenly spaced boxes."
   },
-
   {
     "id": "max_width",
     "title": "Max Width",
