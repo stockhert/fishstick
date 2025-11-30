@@ -38,16 +38,13 @@ async function initializeLessonHandlers() {
             lessonItems.forEach(li => li.classList.remove('active'));
             this.classList.add('active');
             
-            const lessonTitle = this.textContent.trim();
-            const lesson = lessons.find(lesson =>
-                lesson.title.toLowerCase().includes(lessonTitle.toLowerCase()) ||
-                lessonTitle.toLowerCase().includes(lesson.title.toLowerCase().split(' ').pop().toLowerCase())
-            );
+            const lessonName = this.textContent.trim().toLowerCase().replace(/\s+/g, '_');
+            const lesson = lessons.find(lesson => lesson.id === lessonName);
             
             if (lesson) {
                 displayLesson(lesson);
             } else {
-                console.warn(`Lesson not found for: ${lessonTitle}`);
+                console.warn(`Lesson not found for: ${lessonName}`);
             }
         });
     });
