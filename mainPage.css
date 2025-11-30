@@ -137,7 +137,7 @@ aside ul li{
 
 
 aside ul li:hover{
-    text-decoration: underline;
+    text-decoration: none;
     transition: 0.05s;
     transform: scale(1.05);
     text-shadow: 0 0 5px #fff,
