@@ -311,6 +311,7 @@ body {
     border-radius: var(--border-radius);
     border: 1px solid var(--secondary-color);
     margin-top: 40px;
-    width: 50%;
+    width: 30%;
+    padding: 10px;
 }
 /**/
