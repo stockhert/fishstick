@@ -152,13 +152,13 @@
     "content": "Fonts affect how text looks and how easy it is to read. CSS allows you to use system fonts or import custom fonts, such as from Google Fonts.<br><br>You can add a Google Font by using a <code>&lt;link&gt;</code> in the HTML or @import in CSS. Example: <code>body { font-family: \"Roboto\", sans-serif; }</code>.<br><br><strong>Task:</strong> Apply a Google Font to your entire webpage."
   },
   {
-    "id": "links",
-    "title": "Links",
+    "id": "link",
+    "title": "Link",
     "content": "Links can have different styles for normal, hover, visited, or active states. This makes them feel interactive and improves user experience.<br><br>Example: <code>a:hover { color: red; }</code> changes the color when the mouse hovers over the link. You can also style underlines, backgrounds, and transitions.<br><br><strong>Task:</strong> Style the hover state of all links on your page."
   },
   {
-    "id": "lists",
-    "title": "Lists",
+    "id": "list",
+    "title": "List",
     "content": "Lists can be customized by changing bullet types, removing bullets, or adjusting spacing.<br><br>Example: <code>ul { list-style-type: square; }</code> changes bullets to squares. You can also remove bullets entirely using <code>list-style: none;</code>.<br><br><strong>Task:</strong> Remove the bullets from a list to create a clean navigation menu style."
   },
   {
