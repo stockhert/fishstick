@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fishstick - contact</title>
+    <link rel="stylesheet" href="contact.css"/>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <div class="navContainer">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mainPage.html">Learn</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li style="font-weight: 900"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="container_contact">
+                <form class="contact" action="contact.php" method="post">
+                    <h2>Ask Us Anything!</h2>
+                    <input type="text" id="name" placeholder="Your Name" maxlength="50px" required>
+                    <input type="email" id="email" placeholder="Your Email" maxlength="39px" required>
+                    <input type="text" id="subject" placeholder="Subject" maxlength="20px" required>
+                    <textarea cols="30" rows="4" id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>  © 2025 FishStick — Learn to build the web.</p>
+            <ion-icon name="logo-github"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="mail-outline"></ion-icon>
+        </footer>
+    </div>
+
+    <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="contact.js"></script>
+</body>
+</html>

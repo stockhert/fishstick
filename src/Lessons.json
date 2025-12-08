@@ -1,0 +1,179 @@
+
+
+[
+  {
+    "id": "html",
+    "title": "Introduction to HTML", 
+    "content": "HTML is the foundational language used to structure everything you see on a webpage. It defines what each piece of content is, such as text, images, buttons, lists, or links—and gives browsers a clear blueprint for how the page should be organized. Without HTML, websites would have no structure, no readable content, and nothing for CSS or JavaScript to style or interact with. HTML acts like the skeleton of a webpage, and every other technology builds on top of it. HTML is used by writing elements made up of tags that wrap around content. These tags tell the browser what type of information you're presenting. <br><br> For example, <code>&lt;p&gt;</code>Hello World!<code>&lt;/p&gt;</code> creates a paragraph, while <code>&lt;h1&gt;</code> creates a large heading. You combine many such elements to form a complete webpage with sections, navigation, content blocks, and more. <br><br> <strong>Task:</strong> Create a basic HTML document and add a paragraph that introduces yourself."
+  },
+  {
+    "id": "elements",
+    "title": "Elements",
+    "content": "Elements are the building blocks of every webpage. Each element represents a specific kind of content or function—headings, paragraphs, images, links, lists, buttons, sections, and more. By choosing the correct element for each piece of content, you help the browser display information correctly and make your page more accessible and easier to read. <br><br> Elements are written using an opening and closing tag, like <code>&lt;h1&gt;</code>Title<code>&lt;/h1&gt;</code>, which tells the browser where the element starts and ends. Some elements, such as <code>&lt;img&gt;</code> or <code>&lt;br&gt;</code>, don't need closing tags because they don't wrap content. Understanding the purpose of each element helps you create well-structured and meaningful pages.<br><br> <strong>Task:</strong> Add a heading, a paragraph, and a list element to your page."
+  },
+  {
+    "id": "attributes",
+    "title": "Attributes",
+    "content": "Attributes add extra information to elements and modify how they behave. They appear inside the opening tag and can define things like IDs, classes, image sources, or link destinations.<br><br>They are used by including name–value pairs in the element, such as <code>&lt;img src=\"photo.jpg\" alt=\"A photo\"&gt;</code>. This tells the browser what file to load and how to describe it.<br><br><strong>Task:</strong> Add an image using src and alt, and add a link using href."
+  },
+  {
+    "id": "headings",
+    "title": "Headings",
+    "content": "Headings (<code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>) create structure and hierarchy for your content. They help readers quickly understand sections and improve SEO by letting search engines map page structure.<br><br>They're used by placing heading tags around text, like <code>&lt;h2&gt;About Me&lt;/h2&gt;</code>. The browser automatically sizes them according to importance.<br><br><strong>Task:</strong> Add a main title and two subsections using different heading levels."
+  },
+  {
+    "id": "paragraphs",
+    "title": "Paragraphs",
+    "content": "Paragraphs (<code>&lt;p&gt;</code>) represent blocks of text and are used whenever you want to present written information. They help break content into readable sections.<br><br>Using paragraphs is simple: <code>&lt;p&gt;This is my first paragraph.&lt;/p&gt;</code>. The browser automatically adds spacing.<br><br><strong>Task:</strong> Write two paragraphs about your favorite hobby."
+  },
+  {
+    "id": "styles",
+    "title": "Styles",
+    "content": "Styling adds appearance to HTML by using CSS. It controls color, spacing, size, layout, and more. Without CSS, every site would look plain and unformatted.<br><br>Styling is used by applying CSS inline, in <code>&lt;style&gt;</code> tags, or external files. Example inline style: <code>&lt;p style=\"color: blue;\"&gt;Text&lt;/p&gt;</code>.<br><br><strong>Task:</strong> Change the text color and background color of a paragraph."
+  },
+  {
+    "id": "formatting",
+    "title": "Formatting",
+    "content": "Formatting tags like <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;b&gt;</code>, and <code>&lt;i&gt;</code> allow you to emphasize or highlight text. Some tags add meaning (like <code>&lt;strong&gt;</code>, meaning “important”), while others simply change appearance (like <code>&lt;b&gt;</code> for bold). <br><br>Example: <code>&lt;strong&gt;</code> Warning, <code>&lt;/strong&gt;</code> Check your settings. <br><br> Output: <strong> Warning,</strong> Check your settings. <br><br>These tags help guide the reader’s attention. <br><br><strong>Task:</strong> use bold and italic formatting on different words in a sentence."
+  },
+  {
+    "id": "quotations",
+    "title": "Quotations",
+    "content": "Quotation tags display quoted content properly. <code>&lt;blockquote&gt;</code> is for long quotes and <code>&lt;q&gt;</code> for short inline quotes. <code>&lt;cite&gt;</code> identifies the source.<br>Example: <code>&lt;blockquote&gt;Learning never stops.&lt;/blockquote&gt;</code>. This displays an indented quote.<br><br><strong>Task:</strong> Add one long and one short quote to your page."
+  },
+  {
+    "id": "comments",
+    "title": "Comments",
+    "content": "Comments help developers leave notes in the code without affecting the page. They are useful for organization and reminders.<br>They're created using <code>&lt;!-- This is a comment --&gt;</code> and can wrap explanations.<br><br><strong>Task:</strong> Add a comment describing the purpose of your webpage."
+  },
+  {
+    "id": "links",
+    "title": "Links",
+    "content": "Links (<code>&lt;a href=\"\"&gt;</code>) connect webpages or sections, making navigation possible. They are essential to the entire web. They can lead to other websites, your own pages, files, email addresses, or even different sections of the same page. <br><br>Example: <code>&lt;a href=\"https://google.com\"&gt;Visit Google&lt;/a&gt;</code>. This creates a clickable link that, when clicked, takes you to the google home page.<br><br><strong>Task:</strong> Create links to another website, another section on your page, and your email."
+  },
+  {
+    "id": "images",
+    "title": "Images",
+    "content": "Images make webpages visual by embedding pictures using <code>&lt;img&gt;</code>. They require a source and should always include accessible descriptions.<br>Example: <code>&lt;img src=\"cat.jpg\" alt=\"A cute cat\"&gt;</code>. The image loads from the given path.<br><br><strong>Task:</strong> Insert an image and provide a descriptive alt text."
+  },
+  {
+    "id": "table",
+    "title": "Table",
+    "content": "Tables display data in rows and columns, making information easier to compare. They are useful for schedules, pricing charts, specifications, and structured data. A simple table uses <code>&lt;table&gt;</code> (table), <code>&lt;tr&gt;</code> (table row), <code>&lt;th&gt;</code> (table header), and <code>&lt;td&gt;</code> (table data). <br><br>Example:<br><code>&lt;table&gt;</code><br><code>&lt;tr&gt;</code><br><code>&lt;th&gt;</code>name<code>&lt;/th&gt;</code><code>&lt;th&gt;</code>age<code>&lt;/th&gt;</code><br><code>&lt;/tr&gt;</code><br><code>&lt;tr&gt;</code><br><code>&lt;td&gt;</code>'...'<code>&lt;/td&gt;</code><code>&lt;td&gt;</code>18<code>&lt;/td&gt;</code><br><code>&lt;/tr&gt;</code><br><code>&lt;/table&gt;</code>. <br><br>Output: <table border=1 style='width:100%; border:1px white;'><th style='width:50%'>name</th><th style='width:50%'>age</th></tr><tr><td>'...'</td><td>18</td></tr></table><br><br><strong>Task:</strong> Create a table with two rows and three columns."
+  },
+  {
+    "id": "lists",
+    "title": "Lists",
+    "content": "Lists display information in either ordered <code>&lt;ol&gt;</code>(numbered) or unordered <code>&lt;ul&gt;</code>(bulleted) format followed by a line tag <code>&lt;li&gt;</code>. They make information easier to skim and help structure content clearly.<br><br>Example: <code>&lt;ul&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;li&gt;Bread&lt;/li&gt;&lt;/ul&gt;</code>.<br><br><strong>Task:</strong> Create one unordered list and one ordered list."
+  },
+  {
+    "id": "block_&_inline",
+    "title": "Block & Inline",
+    "content": "Block elements (like <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code>) take up the full width, while inline elements (like <code>&lt;a&gt;</code> and <code>&lt;span&gt;</code>) only take the space of their content.<br><br>Example: <code>&lt;div&gt;This is block&lt;/div&gt;</code> vs <code>&lt;span&gt;This is inline&lt;/span&gt;</code>. The div will take up the entire width while the span only takes up the width it requires.<br><br><strong>Task:</strong> Add one block and one inline element and observe how they behave."
+  },
+  {
+    "id": "classes",
+    "title": "Classes",
+    "content": "Classes allow you to apply the same styling to multiple elements. You can reuse the same class name as many times as need, making it perfect for styling groups of similar items.<br><br>Example: <code>&lt;div class=\"box\"&gt;Content&lt;/div&gt;</code> paired with <code>.box { color: red; }</code>. The '.box' code searches for an element with the class name 'box' and changes the color of the text to red.<br><br><strong>Task:</strong> Create a class and apply it to two elements."
+  },
+  {
+    "id": "ids",
+    "title": "IDs",
+    "content": "IDs identify a single, unique element on the page. You can only use each ID once. They are useful for linking, JavaScript manipulation, and targeting one specific item with CSS.<br><br>Example: <code>&lt;h2 id=\"top\"&gt;Top&lt;/h2&gt;</code> and linking with <code>&lt;a href=\"#top\"&gt;Go up&lt;/a&gt;</code>. The link is connected to the element with the ID 'top', when pressed the website will jump down to the start of the h2 element, useful for creating navigation bars.<br><br><strong>Task:</strong> Create an ID on a heading and link to it."
+  },
+  {
+    "id": "iframes",
+    "title": "Iframes",
+    "content": "Iframes embed external websites or content inside your own page. They are commonly used for YouTube videos, Google Maps, and other interactive elements.<br><br>Example: <code>&lt;iframe src=\"https://example.com\"&gt;&lt;/iframe&gt;</code>.<br><br><strong>Task:</strong> Embed a YouTube video using an iframe."
+  },
+  {
+    "id": "css",
+    "title": "Introduction to CSS",
+    "content": "CSS is the language used to style HTML. It controls colors, spacing, layout, fonts, animations, and responsiveness. While HTML creates structure, CSS determines what that structure looks like.<br><br>Example: linking an external stylesheet: <code>&lt;link rel=\"stylesheet\" href=\"styles.css\"&gt;</code> written in the 'head' of the html file.<br><br><strong>Task:</strong> Link a CSS file to your HTML."
+  },
+  {
+    "id": "syntax",
+    "title": "Syntax",
+    "content": "CSS syntax is made of selectors, properties, and values. A rule tells the browser how to style selected elements.<br><br>Example: <code>p { color: blue; }</code> makes all paragraphs blue.<br><br><strong>Task:</strong> Make all paragraphs turn blue and give the elements a background color."
+  },
+  {
+    "id": "selectors",
+    "title": "Selectors",
+    "content": "Selectors choose which elements to style—tags, classes, IDs, or combinations.<br><br>Example: <code>.title { font-size: 24px; }</code> to target a class with the name 'title' and makes the text size 24px. <code>#title{ background-color: blue; }</code> to target an element with the id 'title' and makes the background of the element blue.<br><br><strong>Task:</strong> Style one element with a class and another with an ID."
+  },
+  {
+    "id": "colors",
+    "title": "Colors",
+    "content": "Color styling in CSS allows you to control the color of text, backgrounds, borders, and many other visual elements. It's one of the simplest yet most important parts of making a website look appealing, because color helps create mood, contrast, and readability.<br><br>You can apply colors using names (red), hex codes (#ff0000), RGB (rgb(255,0,0)), or HSL (hsl(0, 100%, 50%)). For example: <code>h1 { color: #ff0000; }</code> sets a heading to bright red. Different formats are useful depending on whether you want precision or easier adjustments.<br><br><strong>Task:</strong> Change the text of one element using a hex color, and change the background of another using RGB."
+  },
+  {
+    "id": "backgrounds",
+    "title": "Backgrounds",
+    "content": "Backgrounds define what appears behind an element's content. This can be a solid color, an image, a gradient, or even patterns, helping give structure and personality to a page.<br><br>You apply backgrounds with properties like background-color, background-image, or background-size. For example: <code>div { background-color: lightgray; }</code> gives a smooth gray background. Images can also be used: <code>background-image: url(\"image.jpg\");</code>.<br><br><strong>Task:</strong> Add a background image to a chosen element and make sure it displays correctly."
+  },
+  {
+    "id": "borders",
+    "title": "Borders",
+    "content": "Borders help separate content and make elements stand out. They can have different widths, colors, and styles like solid, dashed, or dotted.<br><br>A basic border looks like this: <code>div { border: 2px solid black; }</code>. You can also adjust the shape with border-radius, which adds rounded corners. Borders are useful for cards, buttons, boxes, and highlighted areas.<br><br><strong>Task:</strong> Add a border to a box and give it rounded corners using border-radius."
+  },
+  {
+    "id": "margins",
+    "title": "Margins",
+    "content": "Margins are the empty space outside an element. They create distance between sections and prevent everything from being squeezed together.<br><br>A margin can be applied like this: <code>p { margin-top: 20px; }</code>. Margins can target each side individually or all at once. They're essential for giving your layout breathing room.<br><br><strong>Task:</strong> Add margins to create clear spacing between two sections."
+  },
+  {
+    "id": "paddings",
+    "title": "Paddings",
+    "content": "Padding is the space inside an element, between the content and its border. It makes text and elements look cleaner and easier to read.<br><br>For example: <code>div { padding: 10px; }</code> adds space on all sides inside the element. Padding is often used for buttons, cards, and content boxes.<br><br><strong>Task:</strong> Add padding to a box so the text inside is not touching the edges."
+  },
+  {
+    "id": "height/width",
+    "title": "Height/Width",
+    "content": "These properties control how big an element is. You can use units like pixels, percentages, or responsive units such as vw and vh.<br><br>Example: <code>div { width: 50%; height: 200px; }</code> creates a box that's half the page width and 200px tall. Sizing helps structure your layout and control how elements sit on the page.<br><br><strong>Task:</strong> Create a box that is 200px tall and 50% of the page's width."
+  },
+  {
+    "id": "box_model",
+    "title": "Box Model",
+    "content": "The CSS box model shows how every element is built from content, padding, border, and margin. Understanding it is key to controlling layout and spacing.<br><br>You can inspect elements in the browser dev tools to visually see this structure. This helps you understand why something is bigger or spaced differently than expected.<br><br><strong>Task:</strong> Use your browser's inspector to view the box model of any element."
+  },
+  {
+    "id": "outline",
+    "title": "Outline",
+    "content": "An outline is like a border, but it does not affect the layout. It sits outside the element's border and is often used for highlighting.<br><br>Example: <code>button { outline: 2px dashed red; }</code>. Outlines are also commonly used by browsers to show focus states, like when tabbing through elements.<br><br><strong>Task:</strong> Add an outline to a paragraph element to highlight it."
+  },
+  {
+    "id": "text",
+    "title": "Text",
+    "content": "Text styling lets you control alignment, spacing, decoration, size, and more. It helps ensure your text is readable and visually balanced.<br><br>Example: <code>h1 { text-align: center; }</code> centers a heading. You can also adjust line height, letter spacing, and text decoration to improve readability.<br><br><strong>Task:</strong> Center a heading and adjust its line height to improve spacing."
+  },
+  {
+    "id": "fonts",
+    "title": "Fonts",
+    "content": "Fonts affect how text looks and how easy it is to read. CSS allows you to use system fonts or import custom fonts, such as from Google Fonts.<br><br>You can add a Google Font by using a <code>&lt;link&gt;</code> in the HTML or @import in CSS. Example: <code>body { font-family: \"Roboto\", sans-serif; }</code>.<br><br><strong>Task:</strong> Apply a Google Font to your entire webpage."
+  },
+  {
+    "id": "links",
+    "title": "Links",
+    "content": "Links can have different styles for normal, hover, visited, or active states. This makes them feel interactive and improves user experience.<br><br>Example: <code>a:hover { color: red; }</code> changes the color when the mouse hovers over the link. You can also style underlines, backgrounds, and transitions.<br><br><strong>Task:</strong> Style the hover state of all links on your page."
+  },
+  {
+    "id": "lists",
+    "title": "Lists",
+    "content": "Lists can be customized by changing bullet types, removing bullets, or adjusting spacing.<br><br>Example: <code>ul { list-style-type: square; }</code> changes bullets to squares. You can also remove bullets entirely using <code>list-style: none;</code>.<br><br><strong>Task:</strong> Remove the bullets from a list to create a clean navigation menu style."
+  },
+  {
+    "id": "tables",
+    "title": "Tables",
+    "content": "Tables become much easier to read with spacing, borders, and alternating row colors.<br><br>Example: <code>tr:nth-child(even) { background: #f2f2f2; }</code> colors every second row. You can also add padding and borders to make the table more readable.<br><br><strong>Task:</strong> Add alternating row colors to a table."
+  },
+  {
+    "id": "display",
+    "title": "Display",
+    "content": "The display property controls how elements behave: block, inline, flex, or grid. Flex and grid are powerful for building modern layouts.<br><br>Example: <code>.container { display: flex; }</code> creates a flexible layout where items can sit in rows or columns. Flexbox makes alignment and spacing much easier.<br><br><strong>Task:</strong> Create a flexbox row with three evenly spaced boxes."
+  },
+  {
+    "id": "max-width",
+    "title": "Max-width",
+    "content": "Max width prevents content from getting too wide, which improves readability on large screens.<br><br>Example: <code>main { max-width: 800px; margin: auto; }</code> centers the content and limits how wide it can stretch. Designers often use max width for text-heavy pages.<br><br><strong>Task:</strong> Apply max-width to your main layout container."
+  }
+]
